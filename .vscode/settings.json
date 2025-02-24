@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "\"files.associations\": {     \"*.fsh\": \"glsl\" }": "",
+        "*.fsh": "glsl",
+        "stdio.h": "c",
+        "source_location": "c",
+        "main.h": "c",
+        "limits": "c",
+        "tuple": "c",
+        "variant": "c",
+        "cstdint": "c",
+        "typeindex": "c",
+        "typeinfo": "c"
+    }
+}

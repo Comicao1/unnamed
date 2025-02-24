@@ -1,0 +1,7 @@
+# created with RSD_Exporter (July 2024) for MarbleClay.
+@RSD940102
+PLY=w_alien.ply
+MAT=w_alien.mat
+GRP=w_alien.grp
+NTEX=1
+TEX[0]=w_alientex.tim

@@ -1,0 +1,6 @@
+# Created by SMXTOOL 0.18b by Lameguy64
+@RSD940102
+PLY=cubo.ply
+MAT=cubo.mat
+NTEX=1
+TEX[0]=cubotex.tim

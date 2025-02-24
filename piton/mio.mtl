@@ -1,0 +1,46 @@
+# Blender MTL File: 'untitled.blend'
+# Material Count: 4
+
+newmtl Hair.001
+Ns 180.000004
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\suliv\\Desktop\\Leon\\Mio\\4.png
+
+newmtl Head.001
+Ns 180.000004
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\suliv\\Desktop\\Leon\\Mio\\0.png
+
+newmtl Pants.001
+Ns 180.000004
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\suliv\\Desktop\\Leon\\Mio\\2.png
+
+newmtl Shirt.001
+Ns 180.000004
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\suliv\\Desktop\\Leon\\Mio\\1.png
