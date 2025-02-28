@@ -10,6 +10,10 @@
         "variant": "c",
         "cstdint": "c",
         "typeindex": "c",
-        "typeinfo": "c"
+        "typeinfo": "c",
+        "r3000.h": "c",
+        "array": "c",
+        "string_view": "c",
+        "types.h": "c"
     }
 }

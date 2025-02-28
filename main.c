@@ -91,32 +91,23 @@ void LoadTexture(u_long * tim, TIM_IMAGE * tparam){     // This part is from Lam
 
 static unsigned long heap[256 * 1024];
 int main(void){
-            InitHeap(heap, sizeof(heap));
+    InitHeap(heap, sizeof(heap));
     init();
-    char *buffer = malloc(307200); // Allocate 4 KB buffer
-    if (!buffer) {
-        printf("Failed to allocate memory.\n");
-        return 1;
-    }
 
     struct Cube myCube2 = {};
     //loadFile("\\MODEL.BIN;1");
     //loadMDL("\\CUBINHO.OBJ;1", &myCube2);
     //loadMDL("\\CUBAS.OBJ;1", &myCube2);
     //loadMDL("\\TRIGIX.OBJ;1", &myCube2);
-    loadMDL("\\HIBRID.OBJ;1", &myCube2);
-    PrintFacesWithVertices(&myCube2);
+    loadMDL("\\HIBRIDO3.OBJ;1", &myCube2, "\\BONE.JSON;1");
+    //PrintFacesWithVertices(&myCube2);
 
     struct Objects object;
-    struct Cube myCube = {};
-    myCube.n_prim =  OpenTMD((u_long*)_binary_w_alien_tmd_start, 0);  
     LoadTexture(_binary_og_pipe02_tim_start, &myCube2.tim);
-    myCube.mesh = malloc(myCube.n_prim * sizeof(SVECTOR_3D)); //maybe svector3d
-    size_t size_to_allocate = sizeof(SVECTOR_3D);
 
     object.cubes[0] = myCube2;
-    object.cubes[1] = myCube;
-    printf("hi");
+
+    /*
     if(1 == 2)
         for (int i = 0; i < object.cubes[1].n_prim; i++) {
             ReadTMD(&object.cubes[1].tmd);
@@ -145,11 +136,12 @@ int main(void){
             object.cubes[1].mesh[i].v2 = object.cubes[1].tmd.v2;
 
         }
+    */
     long OTz, Flag, p, t;
-    object.cubes[0].Trans.vy = 70;
+    object.cubes[0].Trans.vy = 85;
     object.cubes[0].Trans.vz = 200;
     object.cubes[0].Rotate.vx = 2000;
-    long size = 8000; 
+    long size = 350; 
     object.cubes[0].Scale.vx = size;
     object.cubes[0].Scale.vy = size;
     object.cubes[0].Scale.vz = size;
@@ -164,7 +156,17 @@ int main(void){
         ScaleMatrix(&object.cubes[0].Matrix, &object.cubes[0].Scale);
         SetRotMatrix(&object.cubes[0].Matrix);
         SetTransMatrix(&object.cubes[0].Matrix);
-
+        //printf("hallo");
+        //printf("index: %d", object.cubes[0].boneCount);
+        /*
+        for(int i = 0; i < object.cubes[0].boneCount; i++){
+            Bone cuzin = object.cubes[0].bones[i];
+            for(int j = 0; j < cuzin.vertex_count; j++){
+                printf("%d ", cuzin.vertices[j].vertex_index);
+            }
+            break;
+        }
+        */
         for (int i = 0; i < object.cubes[0].n_prim; i++) {
             object.cubes[0].polygon = (POLY_GT3 *)nextpri;
             SetPolyGT3(object.cubes[0].polygon);

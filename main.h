@@ -18,6 +18,7 @@
 #include <libgpu.h>
 #include <stdint.h>
 #include <string.h>
+#include <r3000.h>
 
 #define VMODE 0                 // Video Mode : 0 : NTSC, 1: PAL
 #define SCREENXRES 320          // Screen width
@@ -37,28 +38,40 @@ char * nextpri = primbuff[0];                       // Primitive counter
 short db = 0;                      // index of which buffer is used, values 0, 1
 
 typedef struct {
+    int vertex_index;
+    int weight;
+} __attribute__((aligned(4))) BoneVertex;  // Explicitly align BoneVertex
+
+typedef struct {
+    char bone_name[32];
+    BoneVertex vertices[256];
+    short vertex_count;
+} __attribute__((aligned(4))) Bone;  // Explicitly align Bone
+
+typedef struct {
     SVECTOR x, y, z; // Each component is also an SVECTOR
     u_char r0, g0, b0;    /* Color of vertex 0 */
     u_char r1, g1, b1;    /* Color of vertex 1 */
     u_char r2, g2, b2;    /* Color of vertex 2 */
-    u_short	tpage, clut;
-	u_char	u0, v0, u1, v1, u2, v2;		/* texture corner point */
+    u_short tpage, clut;
+    u_char u0, v0, u1, v1, u2, v2;        /* texture corner point */
 } __attribute__((aligned(4))) SVECTOR_3D;
 
-typedef struct Cube{
-    int len;
-    int n_prim;
-    TMD_PRIM tmd;
+typedef struct Cube {
+    short len;
+    short n_prim;
     POLY_GT3* polygon;
     SVECTOR Rotate;
-    VECTOR  Trans;
-    VECTOR  Scale;
-    MATRIX  Matrix;
+    VECTOR Trans;
+    VECTOR Scale;
+    MATRIX Matrix;
     TIM_IMAGE tim;
+    Bone bones[10];
+    short boneCount;
     SVECTOR_3D *mesh;  // Use pointer for mesh instead of flexible array
-} Cube;
+} __attribute__((aligned(4))) Cube;  // Explicitly align Cube
 
 
-struct Objects{
+struct Objects {
     struct Cube cubes[1];
-};
+} __attribute__((aligned(8)));

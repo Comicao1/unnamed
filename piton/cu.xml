@@ -37,6 +37,8 @@
 			<file name="cuboing.obj"	type="data"	source="cuboing.obj"/>
 			<file name="plano.obj"	type="data"	source="plano.obj"/>
 			<file name="hibrid.obj"	type="data"	source="hibrid.obj"/>
+			<file name="hibrido3.obj"	type="data"	source="hibrido3.obj"/>
+			<file name="bone.json" type="data" source="bone.json"/>
         </directory_tree>
     </track>
 	
