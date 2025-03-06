@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- MKPSXISO example XML script -->
+
+<!-- <iso_project>
+	Starts an ISO image project to build. Multiple <iso_project> elements may be
+	specified within the same xml script useful for multi-disc game projects.
+
+	<iso_project> elements must contain at least one <track> element.
+	
+	Attributes:
+		image_name	- File name of the ISO image file to generate.
+		cue_sheet	- File name of the cue sheet for the image file
+					  (Optional, required if more than one track is specified, not needed
+					  if you don't use CD audio in your project).
+		no_xa		- If non zero, creates the image without CD-XA file attributes.
+-->
+<iso_project image_name="myimage.bin" cue_sheet="myimage.cue" no_xa="0">
+    <track type="data" xa_edc="true" new_type="false">
+        <directory_tree>
+			<file name="sh.json" type="data" source="sh.json"/>
+			<file name="sh.obj" type="data" source="sh.obj"/>
+			<file name="cubin.obj" type="data" source="cubin.obj"/>
+			<file name="cubin.json" type="data" source="cubin.json"/>
+        </directory_tree>
+    </track>
+	
+</iso_project>

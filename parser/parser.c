@@ -1,5 +1,3 @@
-
-
 #include "../main.h"
 
 typedef struct {
@@ -7,7 +5,7 @@ typedef struct {
     int size;
 } FileBuffer;
 
-FileBuffer loadFile(const char* filename) {
+FileBuffer loadFile(char* filename) {
     CdlFILE filePos;
     int numsecs;
     FileBuffer fileBuffer = {NULL, 0};
@@ -34,11 +32,6 @@ typedef struct {
     short vn1, vn2, vn3;
 } Face;
 
-/*
-typedef struct {
-    Bone *ossos;
-} Osseador;
-*/
 
 SVECTOR vertices[4096]; // Adjust size accordingly
 SVECTOR vertices2[4096];
@@ -47,7 +40,7 @@ SVECTOR normals[4096];
 DVECTOR textures[4096];
 int vertexCount = 0, faceCount = 0, normalCount = 0, textureCount = 0;
 
-int ParseFixedPoint(const char *str, int times) {
+int ParseFixedPoint(char *str, int times) {
     int integerPart = 0, fractionPart = 0, divisor = 1, isFraction = 0, sign = 1;
 
     // Check for negative sign at the start
@@ -88,7 +81,7 @@ int ParseFixedPoint(const char *str, int times) {
     return fixedPoint;
 }
 
-int Cucucu(const char *str, int times) {
+int Cucucu(char *str, int times) {
     int integerPart = 0, fractionPart = 0, divisor = 1, isFraction = 0, sign = 1;
 
     // Check for negative sign at the start
@@ -127,7 +120,7 @@ int Cucucu(const char *str, int times) {
     //printf("%d %d \n", integerPart, fixedPoint);
     return fixedPoint;
 }
-int ParseFixedPointTimes10(const char *str,int width, int height) {
+int ParseFixedPointTimes10(char *str,int width, int height) {
     long integerPart = 0, fractionPart = 0, divisor = 1, isFraction = 0;
 
     // Parse integer and fractional parts
@@ -160,7 +153,7 @@ int ParseFixedPointTimes10(const char *str,int width, int height) {
     return (int)cu;
 }
 
-int Testee(const char *str) {
+int Testee(char *str) {
     long integerPart = 0, fractionPart = 0, divisor = 1;
     short isFraction = 0, digitCount = 0;
 
@@ -194,8 +187,8 @@ int Testee(const char *str) {
 }
 
 
-void parse_bone_data(const char *data, Bone *bones, short *bone_count) {
-    const char *current_pos = data;
+void parse_bone_data(char *data, Bone *bones, short *bone_count) {
+    char *current_pos = data;
     
     while (1) {
         // Locate the start of a bone name (detects "Bone", "Bone.001", etc.)
@@ -203,7 +196,7 @@ void parse_bone_data(const char *data, Bone *bones, short *bone_count) {
         if (!*current_pos) break;
 
         // Extract bone name dynamically
-        const char *name_start = ++current_pos;
+        char *name_start = ++current_pos;
         while (*current_pos && *current_pos != '\"') current_pos++;
         if (!*current_pos) break;
 
@@ -274,14 +267,14 @@ void parse_bone_data(const char *data, Bone *bones, short *bone_count) {
         while (1) {
             // Find vertex index
 
-            const char *vertex_pos = strstr(current_pos, "\"vertex_index\":");
+            char *vertex_pos = strstr(current_pos, "\"vertex_index\":");
             if (!vertex_pos || vertex_pos > strstr(current_pos, "}")) break; // Ensure we don't go into another bone
             vertex_pos += 15; // Move past `"vertex_index":`
 
             int vertex_index = (int)strtol(vertex_pos, NULL, 10);
 
             // Find weight
-            const char *weight_pos = strstr(vertex_pos, "\"weight\":");
+            char *weight_pos = strstr(vertex_pos, "\"weight\":");
             if (!weight_pos) break;
             weight_pos += 10; // Move past `"weight":`
             //printf("Debug: Found vertex %d", vertex_index);
@@ -315,7 +308,7 @@ void parse_bone_data(const char *data, Bone *bones, short *bone_count) {
         if (*bone_count >= 64) break; // Avoid overflow
 
         // Move to the next bone dynamically
-        const char *next_bone = strstr(current_pos, "\"bone");
+        char *next_bone = strstr(current_pos, "\"bone");
         if (!next_bone) break;
         current_pos = next_bone;
     }
@@ -323,7 +316,7 @@ void parse_bone_data(const char *data, Bone *bones, short *bone_count) {
     //printf("Debug: Total bones parsed: %d\n", *bone_count);
 }
     
-void loadMDL(const char *filename, Cube* myCube, const char *skeleton) {
+void loadMDL(char *filename, Cube* myCube, char *skeleton) {
     FileBuffer fileBuffer = loadFile(filename);
     FileBuffer fileBuffer2;// = loadFile(filename);
     if(skeleton != NULL){

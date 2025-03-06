@@ -1,37 +1,5 @@
 #include "main.h"
-#include "piton/parser.c"
-extern unsigned char _binary_realcubo_tmd_start[]; // filename must begin with _binary_ followed by the full path, with . and / replaced, and then suffixed with _ and end with _start[]; or end[];
-extern unsigned char _binary_realcubo_tmd_end[];
-
-extern unsigned char _binary_w_alien_tmd_start[]; // filename must begin with _binary_ followed by the full path, with . and / replaced, and then suffixed with _ and end with _start[]; or end[];
-extern unsigned char _binary_w_alien_tmd_end[];
-
-extern unsigned char _binary_cubo_tmd_start[]; // filename must begin with _binary_ followed by the full path, with . and / replaced, and then suffixed with _ and end with _start[]; or end[];
-extern unsigned char _binary_cubo_tmd_end[];
-
-extern unsigned long _binary_cubotex_tim_start[]; // filename must begin with _binary_ followed by the full path, with . and / replaced, and then suffixed with _ and end with _start[]; or end[];
-extern unsigned long _binary_cubotex_tim_end[];
-extern unsigned long _binary_cubotex_tim_length;
-
-extern unsigned long _binary_cubetex_tim_start[]; // filename must begin with _binary_ followed by the full path, with . and / replaced, and then suffixed with _ and end with _start[]; or end[];
-extern unsigned long _binary_cubetex_tim_end[];
-extern unsigned long _binary_cubetex_tim_length;
-
-extern unsigned long _binary_w_alientex_tim_start[]; // filename must begin with _binary_ followed by the full path, with . and / replaced, and then suffixed with _ and end with _start[]; or end[];
-extern unsigned long _binary_w_alientex_tim_end[];
-extern unsigned long _binary_w_alientex_tim_length;
-
-extern unsigned long _binary_w_alientexx_tim_start[]; // filename must begin with _binary_ followed by the full path, with . and / replaced, and then suffixed with _ and end with _start[]; or end[];
-extern unsigned long _binary_w_alientexx_tim_end[];
-extern unsigned long _binary_w_alientexx_tim_length;
-
-extern unsigned long _binary_og_pipe02_tim_start[]; // filename must begin with _binary_ followed by the full path, with . and / replaced, and then suffixed with _ and end with _start[]; or end[];
-extern unsigned long _binary_og_pipe02_tim_end[];
-extern unsigned long _binary_og_pipe02_tim_length;
-
-extern unsigned long _binary_123_tim_start[]; // filename must begin with _binary_ followed by the full path, with . and / replaced, and then suffixed with _ and end with _start[]; or end[];
-extern unsigned long _binary_123_tim_end[];
-extern unsigned long _binary_123_tim_length;
+#include "parser/parser.c"
 
 void init(void)
 {
@@ -79,162 +47,55 @@ void display(void)
 void LoadTexture(u_long * tim, TIM_IMAGE * tparam){     // This part is from Lameguy64's tutorial series : lameguy64.net/svn/pstutorials/chapter1/3-textures.html login/pw: annoyingmous
         OpenTIM(tim);                                   // Open the tim binary data, feed it the address of the data in memory
         ReadTIM(tparam);                                // This read the header of the TIM data and sets the corresponding members of the TIM_IMAGE structure
-        
         LoadImage(tparam->prect, tparam->paddr);        // Transfer the data from memory to VRAM at position prect.x, prect.y
         DrawSync(0);                                    // Wait for the drawing to end
-        
         if (tparam->mode & 0x8){ // check 4th bit       // If 4th bit == 1, TIM has a CLUT
             LoadImage(tparam->crect, tparam->caddr);    // Load it to VRAM at position crect.x, crect.y
             DrawSync(0);                                // Wait for drawing to end
     }
 
 }
-#define FIXED_SHIFT 12
-#define FIXED(x) ((short)((x) * (1 << FIXED_SHIFT))) // Convert float to fixed-point
-#define FIXED_MUL(a, b) (((a) * (b)) >> FIXED_SHIFT) // Fixed-point multiplication
-
-// Precompute fixed-point trigonometric values for 45 degrees
-const short cosTheta = FIXED(0.707);
-const short sinTheta = FIXED(0.707);
 static unsigned long heap[256 * 1024];
 
-short sineTable[360] = {
-    4096, 71, 142, 213, 284, 355, 426, 496, 567, 637,
-    707, 777, 847, 917, 986, 1056, 1125, 1194, 1262, 1331,
-    1399, 1467, 1535, 1602, 1669, 1736, 1803, 1869, 1935, 2000,
-    2065, 2130, 2194, 2258, 2321, 2384, 2446, 2508, 2569, 2630,
-    2690, 2750, 2809, 2867, 2925, 2982, 3039, 3095, 3150, 3205,
-    3259, 3312, 3365, 3417, 3468, 3519, 3569, 3618, 3666, 3714,
-    3761, 3807, 3852, 3896, 3940, 3982, 4024, 4065, 4095, 4096,
-    4095, 4065, 4024, 3982, 3940, 3896, 3852, 3807, 3761, 3714,
-    3666, 3618, 3569, 3519, 3468, 3417, 3365, 3312, 3259, 3205,
-    3150, 3095, 3039, 2982, 2925, 2867, 2809, 2750, 2690, 2630,
-    2569, 2508, 2446, 2384, 2321, 2258, 2194, 2130, 2065, 2000,
-    1935, 1869, 1803, 1736, 1669, 1602, 1535, 1467, 1399, 1331,
-    1262, 1194, 1125, 1056, 986, 917, 847, 777, 707, 637,
-    567, 496, 426, 355, 284, 213, 142, 71, 4096, -71,
-    -142, -213, -284, -355, -426, -496, -567, -637, -707, -777,
-    -847, -917, -986, -1056, -1125, -1194, -1262, -1331, -1399, -1467,
-    -1535, -1602, -1669, -1736, -1803, -1869, -1935, -2000, -2065, -2130,
-    -2194, -2258, -2321, -2384, -2446, -2508, -2569, -2630, -2690, -2750,
-    -2809, -2867, -2925, -2982, -3039, -3095, -3150, -3205, -3259, -3312,
-    -3365, -3417, -3468, -3519, -3569, -3618, -3666, -3714, -3761, -3807,
-    -3852, -3896, -3940, -3982, -4024, -4065, -4095, -4096, -4095, -4065,
-    -4024, -3982, -3940, -3896, -3852, -3807, -3761, -3714, -3666, -3618,
-    -3569, -3519, -3468, -3417, -3365, -3312, -3259, -3205, -3150, -3095,
-    -3039, -2982, -2925, -2867, -2809, -2750, -2690, -2630, -2569, -2508,
-    -2446, -2384, -2321, -2258, -2194, -2130, -2065, -2000, -1935, -1869,
-    -1803, -1736, -1669, -1602, -1535, -1467, -1399, -1331, -1262, -1194,
-    -1125, -1056, -986, -917, -847, -777, -707, -637, -567, -496,
-    -426, -355, -284, -213, -142, -71, 4096
-};
-
-// Get sine from lookup table
-short fixed_sin(int angle) {
-    angle = angle % 360;  // Ensure wrap-around at 360 degrees
-    if (angle < 0) angle += 360;  // Handle negative angles
-    return sineTable[angle];
-}
-
-short fixed_cos(int angle) {
-    angle = (angle + 90) % 360;  // Shift angle by 90° to get cosine
-    if (angle < 0) angle += 360;  // Handle negative angles
-    return sineTable[angle];
-}
-
-
-
 int main(void){
-     InitHeap(heap, sizeof(heap));
+    InitHeap(heap, sizeof(heap));
     init();
 
-    struct Cube myCube2 = {};
-    //loadFile("\\MODEL.BIN;1");
-    //loadMDL("\\CUBINHO.OBJ;1", &myCube2);
-    //loadMDL("\\CUBAS.OBJ;1", &myCube2);
-    //loadMDL("\\TRIGIX.OBJ;1", &myCube2);
-    loadMDL("\\CUBIN.OBJ;1", &myCube2, "\\CUBIN.JSON;1");
-    //PrintFacesWithVertices(&myCube2);
+    struct Objects objects;
+    struct Cube Model;
+    loadMDL("\\CUBIN.OBJ;1", &Model, "\\CUBIN.JSON;1");
+    //LoadTexture(_binary_w_alientex_tim_start, &Model.tim);
 
-    struct Objects object;
-    LoadTexture(_binary_w_alientex_tim_start, &myCube2.tim);
+    objects.cubes[0] = Model;
 
-    object.cubes[0] = myCube2;
-
-    /*
-    if(1 == 2)
-        for (int i = 0; i < object.cubes[1].n_prim; i++) {
-            ReadTMD(&object.cubes[1].tmd);
-            object.cubes[1].mesh[i].x = object.cubes[1].tmd.x0;
-            object.cubes[1].mesh[i].y = object.cubes[1].tmd.x1;
-            object.cubes[1].mesh[i].z = object.cubes[1].tmd.x2;
-
-            object.cubes[1].mesh[i].r0 = object.cubes[1].tmd.r0;
-            object.cubes[1].mesh[i].r1 = object.cubes[1].tmd.r1;
-            object.cubes[1].mesh[i].r2 = object.cubes[1].tmd.r2;
-
-            object.cubes[1].mesh[i].g0 = object.cubes[1].tmd.g0;
-            object.cubes[1].mesh[i].g1 = object.cubes[1].tmd.g1;
-            object.cubes[1].mesh[i].g2 = object.cubes[1].tmd.g2;
-
-            object.cubes[1].mesh[i].b0 = object.cubes[1].tmd.b0;
-            object.cubes[1].mesh[i].b1 = object.cubes[1].tmd.b1;
-            object.cubes[1].mesh[i].b2 = object.cubes[1].tmd.b2;
-
-            object.cubes[1].mesh[i].u0 = object.cubes[1].tmd.u0;
-            object.cubes[1].mesh[i].u1 = object.cubes[1].tmd.u1;
-            object.cubes[1].mesh[i].u2 = object.cubes[1].tmd.u2;
-
-            object.cubes[1].mesh[i].v0 = object.cubes[1].tmd.v0;
-            object.cubes[1].mesh[i].v1 = object.cubes[1].tmd.v1;
-            object.cubes[1].mesh[i].v2 = object.cubes[1].tmd.v2;
-
-        }
-    */
-    long OTz, Flag, p, t;
-    object.cubes[0].Trans.vy = -50;
-    object.cubes[0].Trans.vz = 100;
-    object.cubes[0].Rotate.vx = 1000;
-    object.cubes[0].Rotate.vy = 0;
-    long size = 7000; 
-    object.cubes[0].Scale.vx = size;
-    object.cubes[0].Scale.vy = size;
-    object.cubes[0].Scale.vz = size;
-    short angle = 0;
+    long OTz, Flag, p, t, size;
+    size = 7000; 
+    objects.cubes[0].Trans.vy = -50;
+    objects.cubes[0].Trans.vz = 100; //modificar a translacao
+    objects.cubes[0].Rotate.vx = 1000;
+    objects.cubes[0].Rotate.vy = 0; //modificar rotacao 
+    objects.cubes[0].Scale.vx = size; //modificar escala
+    objects.cubes[0].Scale.vy = size;
+    objects.cubes[0].Scale.vz = size;
+    short angle = 0; //angulo 0 - 360
     while (1)
     {
         ClearOTagR(ot[db], OTLEN);
-        //object.cubes[0].Rotate.vy += 10;  ; // Pan
-        //object.cubes[0].Rotate.vx += 10;  ; // Pan
-        //object.cubes[0].Rotate.vz += 10;  ; // Pan
-        RotMatrix(&object.cubes[0].Rotate, &object.cubes[0].Matrix);
-        TransMatrix(&object.cubes[0].Matrix, &object.cubes[0].Trans);
-        ScaleMatrix(&object.cubes[0].Matrix, &object.cubes[0].Scale);
-        SetRotMatrix(&object.cubes[0].Matrix);
-        SetTransMatrix(&object.cubes[0].Matrix);
-        //printf("hallo");
-        //printf("index: %d", object.cubes[0].boneCount);
-        /*
-        for(int i = 0; i < object.cubes[0].boneCount; i++){
-            Bone bone = object.cubes[0].bones[i];
-            for(int j = 0; j < bone.vertex_count; j++){
-                printf("%d ", bone.vertices[j].vertex_index);
-            }
-            break;
-        }
-        */
+        //objects.cubes[0].Rotate.vy += 10;  ; // Girar em runtime, desabilitado
+        //objects.cubes[0].Rotate.vx += 10;  ; // Girar em runtime, desabilitado
+        //objects.cubes[0].Rotate.vz += 10;  ; // Girar em runtime, desabilitado
+        RotMatrix(&objects.cubes[0].Rotate, &objects.cubes[0].Matrix); //girar matrix
+        TransMatrix(&objects.cubes[0].Matrix, &objects.cubes[0].Trans); //translacionar matriz
+        ScaleMatrix(&objects.cubes[0].Matrix, &objects.cubes[0].Scale); //escalar a matriz
+        SetRotMatrix(&objects.cubes[0].Matrix);  //setar a matrix
+        SetTransMatrix(&objects.cubes[0].Matrix); //setar a matriz
         for (int i = 0; i < 1; i++) {
-            //i = 2;
-            Bone bone = object.cubes[0].bones[i];
+            Bone bone = objects.cubes[0].bones[i];
             angle++;
-
-
-
             for (int j = 0; j < bone.vertex_count; j++) {
                 if (angle == 360) {
                     angle = 0;
                 }
-
                 short eulerX, eulerY, eulerZ, sinX, cosX, sinY, cosY, sinZ, cosZ, transX, transY, transZ;
         
                 eulerX = (4096 * angle) / 360;
@@ -244,11 +105,11 @@ int main(void){
                 sinX = csin(eulerX);
                 cosX = ccos(eulerX);
 
-                sinY = fixed_sin(eulerY);
-                cosY = fixed_cos(eulerY);
+                sinY = csin(eulerY);
+                cosY = ccos(eulerY);
 
-                sinZ = fixed_sin(eulerZ);
-                cosZ = fixed_cos(eulerZ);
+                sinZ = csin(eulerZ);
+                cosZ = ccos(eulerZ);
                 
                 short rotationMatrixX[3][3] = {
                     {4096, 0, 0},
@@ -334,47 +195,47 @@ int main(void){
     
             
         for (int i = 0; i < faceCount; i++) {
-            object.cubes[0].polygon = (POLY_GT3 *)nextpri;
-            SetPolyGT3(object.cubes[0].polygon);
+            objects.cubes[0].polygon = (POLY_GT3 *)nextpri;
+            SetPolyGT3(objects.cubes[0].polygon);
             /*
-            object.cubes[0].polygon->tpage = getTPage(object.cubes[0].tim.mode&0x3, 0,
-                                                object.cubes[0].tim.prect->x,
-                                                object.cubes[0].tim.prect->y
+            objects.cubes[0].polygon->tpage = getTPage(objects.cubes[0].tim.mode&0x3, 0,
+                                                objects.cubes[0].tim.prect->x,
+                                                objects.cubes[0].tim.prect->y
                                                 );
             
                                                 
-            if((object.cubes[0].tim.mode & 0x3) < 2){
-                setClut( object.cubes[0].polygon,          
-                        object.cubes[0].tim.crect->x,
-                        object.cubes[0].tim.crect->y
+            if((objects.cubes[0].tim.mode & 0x3) < 2){
+                setClut( objects.cubes[0].polygon,          
+                        objects.cubes[0].tim.crect->x,
+                        objects.cubes[0].tim.crect->y
                 );
             }   
             */
-            setRGB0(object.cubes[0].polygon, 0,255,0);
-            setRGB1(object.cubes[0].polygon, 0,0,255);
-            setRGB2(object.cubes[0].polygon, 255,0,0);
-            //setRGB1(object.cubes[0].polygon, 120,0,0);
-            //setRGB2(object.cubes[0].polygon, 0,120,0);
-            //setRGB0(object.cubes[0].polygon, object.cubes[0].mesh[i].r0, object.cubes[0].mesh[i].g0, object.cubes[0].mesh[i].b0);
-            //setRGB1(object.cubes[0].polygon, object.cubes[0].mesh[i].r1, object.cubes[0].mesh[i].g1, object.cubes[0].mesh[i].b1);
-            //setRGB2(object.cubes[0].polygon, object.cubes[0].mesh[i].r2, object.cubes[0].mesh[i].g2, object.cubes[0].mesh[i].b2);
+            setRGB0(objects.cubes[0].polygon, 0,255,0);
+            setRGB1(objects.cubes[0].polygon, 0,0,255);
+            setRGB2(objects.cubes[0].polygon, 255,0,0);
+            //setRGB1(objects.cubes[0].polygon, 120,0,0);
+            //setRGB2(objects.cubes[0].polygon, 0,120,0);
+            //setRGB0(objects.cubes[0].polygon, objects.cubes[0].mesh[i].r0, objects.cubes[0].mesh[i].g0, objects.cubes[0].mesh[i].b0);
+            //setRGB1(objects.cubes[0].polygon, objects.cubes[0].mesh[i].r1, objects.cubes[0].mesh[i].g1, objects.cubes[0].mesh[i].b1);
+            //setRGB2(objects.cubes[0].polygon, objects.cubes[0].mesh[i].r2, objects.cubes[0].mesh[i].g2, objects.cubes[0].mesh[i].b2);
             /*
-            setUV3(object.cubes[0].polygon,
-                object.cubes[0].mesh[i].u0, object.cubes[0].mesh[i].v0,
-                object.cubes[0].mesh[i].u1, object.cubes[0].mesh[i].v1,
-                object.cubes[0].mesh[i].u2, object.cubes[0].mesh[i].v2);
+            setUV3(objects.cubes[0].polygon,
+                objects.cubes[0].mesh[i].u0, objects.cubes[0].mesh[i].v0,
+                objects.cubes[0].mesh[i].u1, objects.cubes[0].mesh[i].v1,
+                objects.cubes[0].mesh[i].u2, objects.cubes[0].mesh[i].v2);
             */
             Face *f = &faces[i];
             SVECTOR *v1 = &vertices[f->v1-1];
             SVECTOR *v2 = &vertices[f->v2-1];
             SVECTOR *v3 = &vertices[f->v3-1];
 
-            OTz  = RotTransPers(v1, (long*)&object.cubes[0].polygon->x0, &p, &Flag);
-            OTz += RotTransPers(v2, (long*)&object.cubes[0].polygon->x1, &p, &Flag);
-            OTz += RotTransPers(v3, (long*)&object.cubes[0].polygon->x2, &p, &Flag);
+            OTz  = RotTransPers(v1, (long*)&objects.cubes[0].polygon->x0, &p, &Flag);
+            OTz += RotTransPers(v2, (long*)&objects.cubes[0].polygon->x1, &p, &Flag);
+            OTz += RotTransPers(v3, (long*)&objects.cubes[0].polygon->x2, &p, &Flag);
             OTz /= 3;
             //if ((OTz > 0) && (OTz < OTLEN))
-            AddPrim(&ot[db][OTz], object.cubes[0].polygon);
+            AddPrim(&ot[db][OTz], objects.cubes[0].polygon);
             nextpri += sizeof(POLY_GT3);
         }
         FntPrint("OLA MUNDO!\n");

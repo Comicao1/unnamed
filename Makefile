@@ -4,15 +4,6 @@ TYPE = ps-exe
 SRCS = \
 third_party/nugget/common/crt0/crt0.s \
 main.c \
-cubo.tmd \
-cubotex.tim \
-cubetex.tim \
-realcubo.tmd \
-w_alien.tmd \
-w_alientex.tim \
-w_alientexx.tim \
-og_pipe02.tim \
-123.tim \
 
 CPPFLAGS += -Ithird_party/psyq-iwyu/include
 LDFLAGS += -Lthird_party/psyq/lib

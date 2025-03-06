@@ -8,14 +8,7 @@
 #include <gtemac.h>
 #include <libapi.h>
 #include <inline_n.h>
-#include <libapi.h>
 #include <libcd.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <sys/types.h>
-#include <libcd.h>
-#include <libgte.h>
-#include <libgpu.h>
 #include <stdint.h>
 #include <string.h>
 #include <r3000.h>

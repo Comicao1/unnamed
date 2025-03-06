@@ -1,0 +1,1 @@
+mkpsxiso cd.xml -y
