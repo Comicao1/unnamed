@@ -1,0 +1,99 @@
+import bpy
+import json
+import math
+
+def get_absolute_position(bone):
+    """ Get the absolute position of the bone in world space and convert to left-handed. """
+    position = bone.location
+    if bone.parent:
+        position += bone.parent.location
+    
+    return {
+        "x": position.x, 
+        "y": position.y, 
+        "z": -position.z  # Invert Z for left-handed coordinates
+    }
+
+def get_local_rotation(bone):
+    """ Get the bone's local rotation (Euler XYZ in degrees) and convert to left-handed. """
+    rotation = bone.matrix.to_euler('XYZ')  # Convert matrix to Euler rotation
+    return {
+        "x": math.degrees(rotation.x),
+        "y": -math.degrees(rotation.y),  # Invert Y rotation
+        "z": -math.degrees(rotation.z)   # Invert Z rotation
+    }
+
+def export_bones_and_weights(filepath):
+    obj = bpy.context.object
+    if obj is None or obj.type != 'MESH':
+        print("Select a mesh object with an armature modifier.")
+        return
+    
+    armature = None
+    for mod in obj.modifiers:
+        if mod.type == 'ARMATURE':
+            armature = mod.object
+            break
+    
+    if armature is None or armature.type != 'ARMATURE':
+        print("No armature found on the selected mesh.")
+        return
+
+    # Set frame to 1 and update Blender
+    bpy.context.scene.frame_set(1)
+    bpy.context.view_layer.update()
+
+    bone_data = {}
+
+    # Iterate through bones in the armature
+    for bone in armature.pose.bones:
+        bone_name = bone.name
+        absolute_position = get_absolute_position(bone)  # World space position (converted)
+        local_rotation = get_local_rotation(bone)  # Local Euler rotation (converted)
+        
+        bone_data[bone_name] = {
+            "src": absolute_position,  # Left-handed coordinates
+            "vertex_center": {"x": 0, "y": 0, "z": 0},  # Placeholder for now
+            "rotation": local_rotation,  # Left-handed rotation
+            "data": []
+        }
+    
+    mesh = obj.data
+    vertex_group_positions = {bone_name: [] for bone_name in bone_data.keys()}
+
+    # Extract vertex weights
+    for vertex in mesh.vertices:
+        for group in vertex.groups:
+            group_index = group.group
+            weight = group.weight
+            group_name = obj.vertex_groups[group_index].name
+            
+            if group_name in bone_data:
+                bone_data[group_name]["data"].append({
+                    "vertex_index": vertex.index,
+                    "weight": weight
+                })
+                # Store vertex position for center calculation
+                vertex_position = vertex.co
+                vertex_group_positions[group_name].append(vertex_position)
+    
+    # Calculate vertex group centers
+    for bone_name, positions in vertex_group_positions.items():
+        if positions:
+            avg_x = sum(p.x for p in positions) / len(positions)
+            avg_y = sum(p.y for p in positions) / len(positions)
+            avg_z = sum(p.z for p in positions) / len(positions)
+            
+            bone_data[bone_name]["vertex_center"] = {
+                "x": avg_x,
+                "y": avg_y,
+                "z": -avg_z  # Convert to left-handed
+            }
+    
+    # Save data to JSON file
+    with open(filepath, 'w') as f:
+        json.dump(bone_data, f, indent=4)
+    
+    print(f"Bone data exported to {filepath}")
+
+export_bones_and_weights("C:/Users/suliv/vinicius/piton/sh.json")
