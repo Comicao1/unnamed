@@ -1,0 +1,212 @@
+{
+    "Bone": [
+        {
+            "vertex_index": 0,
+            "weight": 0.1651001274585724
+        },
+        {
+            "vertex_index": 1,
+            "weight": 0.13032659888267517
+        },
+        {
+            "vertex_index": 2,
+            "weight": 0.1561041623353958
+        },
+        {
+            "vertex_index": 3,
+            "weight": 0.1730392426252365
+        },
+        {
+            "vertex_index": 4,
+            "weight": 0.946391224861145
+        },
+        {
+            "vertex_index": 5,
+            "weight": 0.7372044920921326
+        },
+        {
+            "vertex_index": 6,
+            "weight": 0.8334041833877563
+        },
+        {
+            "vertex_index": 7,
+            "weight": 0.8329436182975769
+        },
+        {
+            "vertex_index": 8,
+            "weight": 0.8619852066040039
+        },
+        {
+            "vertex_index": 9,
+            "weight": 0.5452656149864197
+        },
+        {
+            "vertex_index": 10,
+            "weight": 0.8996411561965942
+        },
+        {
+            "vertex_index": 11,
+            "weight": 0.9502397179603577
+        },
+        {
+            "vertex_index": 12,
+            "weight": 0.9314209222793579
+        },
+        {
+            "vertex_index": 13,
+            "weight": 0.9828664064407349
+        },
+        {
+            "vertex_index": 14,
+            "weight": 0.9465821385383606
+        },
+        {
+            "vertex_index": 15,
+            "weight": 0.9833598732948303
+        },
+        {
+            "vertex_index": 16,
+            "weight": 0.9830789566040039
+        },
+        {
+            "vertex_index": 17,
+            "weight": 0.9835060834884644
+        },
+        {
+            "vertex_index": 18,
+            "weight": 0.9834946393966675
+        },
+        {
+            "vertex_index": 19,
+            "weight": 0.9828320145606995
+        },
+        {
+            "vertex_index": 20,
+            "weight": 0.9842919707298279
+        },
+        {
+            "vertex_index": 21,
+            "weight": 0.9858751893043518
+        },
+        {
+            "vertex_index": 22,
+            "weight": 0.9010228514671326
+        },
+        {
+            "vertex_index": 23,
+            "weight": 0.15853391587734222
+        },
+        {
+            "vertex_index": 24,
+            "weight": 0.182078555226326
+        },
+        {
+            "vertex_index": 25,
+            "weight": 0.9196078777313232
+        },
+        {
+            "vertex_index": 26,
+            "weight": 0.17586356401443481
+        },
+        {
+            "vertex_index": 27,
+            "weight": 0.1884738653898239
+        }
+    ],
+    "Bone.001": [
+        {
+            "vertex_index": 6,
+            "weight": 0.03614744171500206
+        },
+        {
+            "vertex_index": 8,
+            "weight": 0.03840203210711479
+        },
+        {
+            "vertex_index": 11,
+            "weight": 0.042012181133031845
+        },
+        {
+            "vertex_index": 14,
+            "weight": 0.04549219831824303
+        },
+        {
+            "vertex_index": 22,
+            "weight": 0.06110519543290138
+        },
+        {
+            "vertex_index": 23,
+            "weight": 0.8398725986480713
+        },
+        {
+            "vertex_index": 24,
+            "weight": 0.8116672039031982
+        },
+        {
+            "vertex_index": 25,
+            "weight": 0.06476352363824844
+        },
+        {
+            "vertex_index": 26,
+            "weight": 0.8229501247406006
+        },
+        {
+            "vertex_index": 27,
+            "weight": 0.8081228137016296
+        }
+    ],
+    "Bone.002": [
+        {
+            "vertex_index": 0,
+            "weight": 0.8343262672424316
+        },
+        {
+            "vertex_index": 1,
+            "weight": 0.8688497543334961
+        },
+        {
+            "vertex_index": 2,
+            "weight": 0.8433336615562439
+        },
+        {
+            "vertex_index": 3,
+            "weight": 0.8258567452430725
+        },
+        {
+            "vertex_index": 4,
+            "weight": 0.050660375505685806
+        },
+        {
+            "vertex_index": 5,
+            "weight": 0.23888057470321655
+        },
+        {
+            "vertex_index": 6,
+            "weight": 0.12352209538221359
+        },
+        {
+            "vertex_index": 7,
+            "weight": 0.14229057729244232
+        },
+        {
+            "vertex_index": 8,
+            "weight": 0.09381375461816788
+        },
+        {
+            "vertex_index": 9,
+            "weight": 0.45082902908325195
+        },
+        {
+            "vertex_index": 10,
+            "weight": 0.09417740255594254
+        },
+        {
+            "vertex_index": 12,
+            "weight": 0.06573374569416046
+        },
+        {
+            "vertex_index": 22,
+            "weight": 0.02574389986693859
+        }
+    ]
+}

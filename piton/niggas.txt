@@ -1,0 +1,11 @@
+32 bits
+
+numero maximo - 2,147,483,647
+
+
+char (1 byte)
+short (2 bytes)
+int (4 bytes)
+long (8 bytes)
+
+0.5

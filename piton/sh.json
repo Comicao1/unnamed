@@ -1,0 +1,1967 @@
+{
+    "bone00": {
+        "src": {
+            "x": 0.0,
+            "y": -16.0,
+            "z": -0.0
+        },
+        "vertex_center": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -0.0
+        },
+        "data": []
+    },
+    "bone01": {
+        "src": {
+            "x": 0.0,
+            "y": -16.0,
+            "z": -0.0
+        },
+        "vertex_center": {
+            "x": 0.3333333333333333,
+            "y": -40.7,
+            "z": 6.5
+        },
+        "rotation": {
+            "x": -24.667438215818027,
+            "y": 16.836880756944993,
+            "z": -7.565335236985917
+        },
+        "data": [
+            {
+                "vertex_index": 376,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 377,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 378,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 379,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 380,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 381,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 382,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 383,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 384,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 385,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 386,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 387,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 388,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 389,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 390,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 391,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 392,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 393,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 394,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 395,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 396,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 397,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 398,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 399,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 400,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 401,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 402,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 403,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 404,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 405,
+                "weight": 1.0
+            }
+        ]
+    },
+    "bone02": {
+        "src": {
+            "x": 0.0,
+            "y": -124.0,
+            "z": 4.0
+        },
+        "vertex_center": {
+            "x": 0.0,
+            "y": -22.12280701754386,
+            "z": -14.035087719298245
+        },
+        "rotation": {
+            "x": 69.2795035062206,
+            "y": 105.98527478513846,
+            "z": 85.46160134819316
+        },
+        "data": [
+            {
+                "vertex_index": 0,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 1,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 2,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 3,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 4,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 5,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 6,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 7,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 8,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 9,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 10,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 11,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 12,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 13,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 14,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 15,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 16,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 17,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 18,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 19,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 20,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 21,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 22,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 23,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 24,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 25,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 26,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 27,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 28,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 29,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 30,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 31,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 32,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 33,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 34,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 35,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 36,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 37,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 38,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 39,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 40,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 41,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 42,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 43,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 44,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 45,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 46,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 47,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 48,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 49,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 50,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 51,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 52,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 53,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 54,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 55,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 56,
+                "weight": 1.0
+            }
+        ]
+    },
+    "bone03": {
+        "src": {
+            "x": 0.0,
+            "y": -92.0,
+            "z": -0.0
+        },
+        "vertex_center": {
+            "x": 1.625,
+            "y": 2.25,
+            "z": 31.125
+        },
+        "rotation": {
+            "x": -55.85616688134039,
+            "y": -59.69560062891215,
+            "z": 51.23393198318264
+        },
+        "data": [
+            {
+                "vertex_index": 309,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 310,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 311,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 312,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 313,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 314,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 315,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 316,
+                "weight": 1.0
+            }
+        ]
+    },
+    "bone04": {
+        "src": {
+            "x": 0.0,
+            "y": -92.0,
+            "z": 40.0
+        },
+        "vertex_center": {
+            "x": -0.5,
+            "y": 5.1875,
+            "z": -21.4375
+        },
+        "rotation": {
+            "x": -111.8445320740664,
+            "y": -0.5132648638252161,
+            "z": -12.413025288135678
+        },
+        "data": [
+            {
+                "vertex_index": 264,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 265,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 266,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 267,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 268,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 269,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 270,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 271,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 272,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 273,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 274,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 275,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 276,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 277,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 278,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 279,
+                "weight": 1.0
+            }
+        ]
+    },
+    "bone05": {
+        "src": {
+            "x": 0.0,
+            "y": -92.0,
+            "z": -12.0
+        },
+        "vertex_center": {
+            "x": -1.7692307692307692,
+            "y": 6.230769230769231,
+            "z": -37.38461538461539
+        },
+        "rotation": {
+            "x": -91.56608291889205,
+            "y": -1.411270121450725,
+            "z": -12.226945321935144
+        },
+        "data": [
+            {
+                "vertex_index": 296,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 297,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 298,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 299,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 300,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 301,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 302,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 303,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 304,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 305,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 306,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 307,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 308,
+                "weight": 1.0
+            }
+        ]
+    },
+    "bone06": {
+        "src": {
+            "x": 0.0,
+            "y": -92.0,
+            "z": -76.0
+        },
+        "vertex_center": {
+            "x": -1.3488372093023255,
+            "y": -1.2093023255813953,
+            "z": -21.953488372093023
+        },
+        "rotation": {
+            "x": -97.61665380647203,
+            "y": -4.01462340402753,
+            "z": -24.604800258487135
+        },
+        "data": [
+            {
+                "vertex_index": 121,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 122,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 123,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 124,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 125,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 126,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 127,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 128,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 129,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 130,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 131,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 132,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 133,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 134,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 135,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 136,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 137,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 138,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 139,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 140,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 141,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 142,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 143,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 144,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 338,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 339,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 340,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 341,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 342,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 343,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 344,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 345,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 346,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 347,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 348,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 349,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 350,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 351,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 352,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 353,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 354,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 355,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 356,
+                "weight": 1.0
+            }
+        ]
+    },
+    "bone07": {
+        "src": {
+            "x": 0.0,
+            "y": -92.0,
+            "z": -0.0
+        },
+        "vertex_center": {
+            "x": 1.625,
+            "y": 2.25,
+            "z": -31.125
+        },
+        "rotation": {
+            "x": -53.62116506037214,
+            "y": -58.977556501847054,
+            "z": 52.306097513050815
+        },
+        "data": [
+            {
+                "vertex_index": 330,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 331,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 332,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 333,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 334,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 335,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 336,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 337,
+                "weight": 1.0
+            }
+        ]
+    },
+    "bone08": {
+        "src": {
+            "x": 0.0,
+            "y": -92.0,
+            "z": -40.0
+        },
+        "vertex_center": {
+            "x": 0.5,
+            "y": 5.1875,
+            "z": -21.4375
+        },
+        "rotation": {
+            "x": -106.39923206016542,
+            "y": 37.68558582101828,
+            "z": 9.336599656708861
+        },
+        "data": [
+            {
+                "vertex_index": 280,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 281,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 282,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 283,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 284,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 285,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 286,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 287,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 288,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 289,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 290,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 291,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 292,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 293,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 294,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 295,
+                "weight": 1.0
+            }
+        ]
+    },
+    "bone09": {
+        "src": {
+            "x": 0.0,
+            "y": -92.0,
+            "z": -92.0
+        },
+        "vertex_center": {
+            "x": 1.7692307692307692,
+            "y": 6.230769230769231,
+            "z": -37.38461538461539
+        },
+        "rotation": {
+            "x": -74.58571354786343,
+            "y": 39.56107721992832,
+            "z": 9.315987853341055
+        },
+        "data": [
+            {
+                "vertex_index": 317,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 318,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 319,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 320,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 321,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 322,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 323,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 324,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 325,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 326,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 327,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 328,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 329,
+                "weight": 1.0
+            }
+        ]
+    },
+    "bone10": {
+        "src": {
+            "x": 0.0,
+            "y": -92.0,
+            "z": -156.0
+        },
+        "vertex_center": {
+            "x": 1.144578313253012,
+            "y": -2.4216867469879517,
+            "z": -21.10843373493976
+        },
+        "rotation": {
+            "x": -67.81455087265793,
+            "y": 53.69801834891312,
+            "z": 28.635581755656798
+        },
+        "data": [
+            {
+                "vertex_index": 57,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 58,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 59,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 60,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 61,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 62,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 63,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 64,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 65,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 66,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 67,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 68,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 69,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 70,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 71,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 72,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 73,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 74,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 75,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 76,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 77,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 78,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 79,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 80,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 81,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 82,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 83,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 84,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 85,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 86,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 87,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 88,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 89,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 90,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 91,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 92,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 93,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 94,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 95,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 96,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 97,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 98,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 99,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 100,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 101,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 102,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 103,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 104,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 105,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 106,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 107,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 108,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 109,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 110,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 111,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 112,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 113,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 114,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 115,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 116,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 117,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 118,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 119,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 120,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 357,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 358,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 359,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 360,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 361,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 362,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 363,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 364,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 365,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 366,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 367,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 368,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 369,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 370,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 371,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 372,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 373,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 374,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 375,
+                "weight": 1.0
+            }
+        ]
+    },
+    "bone11": {
+        "src": {
+            "x": 0.0,
+            "y": -16.0,
+            "z": -0.0
+        },
+        "vertex_center": {
+            "x": 0.0,
+            "y": 22.514285714285716,
+            "z": -6.428571428571429
+        },
+        "rotation": {
+            "x": 7.949941481602043,
+            "y": -164.971608080069,
+            "z": -1.0502732794743947
+        },
+        "data": [
+            {
+                "vertex_index": 201,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 202,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 203,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 204,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 205,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 206,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 207,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 208,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 209,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 210,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 211,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 212,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 213,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 214,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 215,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 216,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 217,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 218,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 219,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 220,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 221,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 222,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 223,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 224,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 225,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 226,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 227,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 256,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 257,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 258,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 259,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 260,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 261,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 262,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 263,
+                "weight": 1.0
+            }
+        ]
+    },
+    "bone12": {
+        "src": {
+            "x": 16.0,
+            "y": 28.0,
+            "z": -0.0
+        },
+        "vertex_center": {
+            "x": 1.2,
+            "y": 46.8,
+            "z": -13.4
+        },
+        "rotation": {
+            "x": -27.504137013982092,
+            "y": -152.71088576514083,
+            "z": -8.738014684453638
+        },
+        "data": [
+            {
+                "vertex_index": 228,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 229,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 230,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 231,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 232,
+                "weight": 1.0
+            }
+        ]
+    },
+    "bone13": {
+        "src": {
+            "x": 16.0,
+            "y": 120.0,
+            "z": -0.0
+        },
+        "vertex_center": {
+            "x": 1.4210526315789473,
+            "y": 59.21052631578947,
+            "z": -7.315789473684211
+        },
+        "rotation": {
+            "x": 28.37013157620613,
+            "y": -152.71088576514083,
+            "z": -8.738014684453638
+        },
+        "data": [
+            {
+                "vertex_index": 163,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 164,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 165,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 166,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 167,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 168,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 169,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 170,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 171,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 172,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 173,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 174,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 175,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 176,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 177,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 178,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 179,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 180,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 181,
+                "weight": 1.0
+            }
+        ]
+    },
+    "bone14": {
+        "src": {
+            "x": 16.0,
+            "y": 228.0,
+            "z": -8.0
+        },
+        "vertex_center": {
+            "x": 5.111111111111111,
+            "y": 17.27777777777778,
+            "z": 10.055555555555555
+        },
+        "rotation": {
+            "x": 30.135460561540334,
+            "y": -156.19743778924388,
+            "z": 0.3450184148258787
+        },
+        "data": [
+            {
+                "vertex_index": 238,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 239,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 240,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 241,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 242,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 243,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 244,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 245,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 246,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 247,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 248,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 249,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 250,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 251,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 252,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 253,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 254,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 255,
+                "weight": 1.0
+            }
+        ]
+    },
+    "bone15": {
+        "src": {
+            "x": -16.0,
+            "y": 28.0,
+            "z": -0.0
+        },
+        "vertex_center": {
+            "x": 1.2,
+            "y": 46.8,
+            "z": 13.4
+        },
+        "rotation": {
+            "x": 19.311345595119306,
+            "y": -5.128101759977342,
+            "z": -2.3374625559246716
+        },
+        "data": [
+            {
+                "vertex_index": 233,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 234,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 235,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 236,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 237,
+                "weight": 1.0
+            }
+        ]
+    },
+    "bone16": {
+        "src": {
+            "x": -16.0,
+            "y": 120.0,
+            "z": -0.0
+        },
+        "vertex_center": {
+            "x": 1.4210526315789473,
+            "y": 59.21052631578947,
+            "z": 7.315789473684211
+        },
+        "rotation": {
+            "x": -1.4213022819592984,
+            "y": -5.128101759977342,
+            "z": -2.3374625559246716
+        },
+        "data": [
+            {
+                "vertex_index": 182,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 183,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 184,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 185,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 186,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 187,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 188,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 189,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 190,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 191,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 192,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 193,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 194,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 195,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 196,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 197,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 198,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 199,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 200,
+                "weight": 1.0
+            }
+        ]
+    },
+    "bone17": {
+        "src": {
+            "x": -16.0,
+            "y": 228.0,
+            "z": 8.0
+        },
+        "vertex_center": {
+            "x": 5.111111111111111,
+            "y": 17.27777777777778,
+            "z": -10.055555555555555
+        },
+        "rotation": {
+            "x": -0.7802688045903563,
+            "y": -7.790592314491999,
+            "z": -0.016393291106410326
+        },
+        "data": [
+            {
+                "vertex_index": 145,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 146,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 147,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 148,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 149,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 150,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 151,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 152,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 153,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 154,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 155,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 156,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 157,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 158,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 159,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 160,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 161,
+                "weight": 1.0
+            },
+            {
+                "vertex_index": 162,
+                "weight": 1.0
+            }
+        ]
+    }
+}

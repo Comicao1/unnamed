@@ -1,0 +1,284 @@
+{
+    "Bone": [
+        {
+            "vertex_index": 145,
+            "weight": 0.9999998211860657
+        },
+        {
+            "vertex_index": 146,
+            "weight": 0.9999998211860657
+        },
+        {
+            "vertex_index": 147,
+            "weight": 0.9999998211860657
+        },
+        {
+            "vertex_index": 148,
+            "weight": 0.9999998211860657
+        },
+        {
+            "vertex_index": 149,
+            "weight": 0.9999998807907104
+        },
+        {
+            "vertex_index": 150,
+            "weight": 0.9999998807907104
+        },
+        {
+            "vertex_index": 151,
+            "weight": 0.9999998807907104
+        },
+        {
+            "vertex_index": 152,
+            "weight": 0.9999998807907104
+        },
+        {
+            "vertex_index": 153,
+            "weight": 0.9999999403953552
+        },
+        {
+            "vertex_index": 154,
+            "weight": 0.9999999403953552
+        },
+        {
+            "vertex_index": 155,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 156,
+            "weight": 0.9999999403953552
+        },
+        {
+            "vertex_index": 157,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 158,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 159,
+            "weight": 0.9999999403953552
+        },
+        {
+            "vertex_index": 160,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 161,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 162,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 163,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 164,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 165,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 166,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 167,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 168,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 169,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 170,
+            "weight": 0.9999999403953552
+        },
+        {
+            "vertex_index": 171,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 172,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 173,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 174,
+            "weight": 0.9999998807907104
+        },
+        {
+            "vertex_index": 175,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 176,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 177,
+            "weight": 1.0000001192092896
+        },
+        {
+            "vertex_index": 178,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 179,
+            "weight": 1.0000001192092896
+        },
+        {
+            "vertex_index": 180,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 181,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 182,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 183,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 184,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 185,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 186,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 187,
+            "weight": 0.9999999403953552
+        },
+        {
+            "vertex_index": 188,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 189,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 190,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 191,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 192,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 193,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 194,
+            "weight": 0.9999999403953552
+        },
+        {
+            "vertex_index": 195,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 196,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 197,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 198,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 199,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 200,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 201,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 202,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 203,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 204,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 205,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 206,
+            "weight": 1.0000001192092896
+        },
+        {
+            "vertex_index": 207,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 208,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 322,
+            "weight": 0.9999998807907104
+        },
+        {
+            "vertex_index": 323,
+            "weight": 0.9999999403953552
+        },
+        {
+            "vertex_index": 324,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 325,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 326,
+            "weight": 1.0
+        },
+        {
+            "vertex_index": 327,
+            "weight": 1.0000001192092896
+        }
+    ]
+}

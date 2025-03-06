@@ -19,10 +19,11 @@
 #include <stdint.h>
 #include <string.h>
 #include <r3000.h>
+#include <libmath.h>
 
 #define VMODE 0                 // Video Mode : 0 : NTSC, 1: PAL
-#define SCREENXRES 320          // Screen width
-#define SCREENYRES 240          // Screen height
+#define SCREENXRES 640          // Screen width
+#define SCREENYRES 480          // Screen height
 #define CENTERX SCREENXRES/2    // Center of screen on x 
 #define CENTERY SCREENYRES/2    // Center of screen on y
 #define MARGINX 0                // margins for text display
@@ -43,12 +44,6 @@ typedef struct {
 } __attribute__((aligned(4))) BoneVertex;  // Explicitly align BoneVertex
 
 typedef struct {
-    char bone_name[32];
-    BoneVertex vertices[256];
-    short vertex_count;
-} __attribute__((aligned(4))) Bone;  // Explicitly align Bone
-
-typedef struct {
     SVECTOR x, y, z; // Each component is also an SVECTOR
     u_char r0, g0, b0;    /* Color of vertex 0 */
     u_char r1, g1, b1;    /* Color of vertex 1 */
@@ -56,6 +51,17 @@ typedef struct {
     u_short tpage, clut;
     u_char u0, v0, u1, v1, u2, v2;        /* texture corner point */
 } __attribute__((aligned(4))) SVECTOR_3D;
+
+typedef struct {
+    SVECTOR_3D mesho[256];
+    char bone_name[32];
+    BoneVertex vertices[256];
+    short vertex_count;
+    SVECTOR centro;
+    SVECTOR rotacao;
+    SVECTOR vertex_center;
+} __attribute__((aligned(4))) Bone;  // Explicitly align Bone
+
 
 typedef struct Cube {
     short len;
@@ -66,9 +72,10 @@ typedef struct Cube {
     VECTOR Scale;
     MATRIX Matrix;
     TIM_IMAGE tim;
-    Bone bones[10];
+    Bone bones[20];
     short boneCount;
     SVECTOR_3D *mesh;  // Use pointer for mesh instead of flexible array
+
 } __attribute__((aligned(4))) Cube;  // Explicitly align Cube
 
 
